@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food360 - MTR Poha</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:wght@400..600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo Bhai 2', cursive;
+            background-image: url('https://images.unsplash.com/photo-1516761765551-9e9d6c45a992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #0e0e0e; /* Changed color to Tomato */
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-xl, .text-3xl {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            transition: transform 0.2s; /* Animation effect */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Pop up effect */
+        }
+        .text-primary {
+            color: #2b6cb0; /* Attractive primary color */
+        }
+        .related-products {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .related-card {
+            border: 1px solid #e2e8f0; /* Border color */
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+        .related-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .know-more-button {
+            margin-top: 10px;
+            background-color: #2b6cb0; /* Attractive button color */
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .know-more-button:hover {
+            background-color: #1e4e8c; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold">Food360</a>
+            <div>
+                <a href="#" class="px-4 py-2">Home</a>
+                <a href="#" class="px-4 py-2">Products</a>
+                <a href="#" class="px-4 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container mx-auto mt-8 p-4">
+        <h1 class="text-3xl font-bold mb-4">MTR 3 Mins Breakfast Poha Pouch (60 Gram)</h1>
+        
+        <!-- Flexbox Layout for Image and Details -->
+        <div class="flex flex-col md:flex-row">
+            <!-- Left Side: Product Image with arrows -->
+            <div class="flex-1 flex items-center justify-center mb-4 md:mb-0">
+                <div class="relative">            
+                    <img id="productImage" src="https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-product-images-o491179467-p491179467-0-202404231713.jpg?im=Resize=(420,420)" alt="MTR 3 Mins Breakfast Poha" class="rounded-lg shadow-lg w-full h-auto max-w-md"> <!-- Increased image size -->
+                    <div class="absolute top-1/2 left-2 transform -translate-y-1/2 flex items-center cursor-pointer" onclick="prevImage()">
+                        <span class="text-3xl">&#8592;</span> <!-- Left arrow -->
+                    </div>
+                    <div class="absolute top-1/2 right-2 transform -translate-y-1/2 flex items-center cursor-pointer" onclick="nextImage()">
+                        <span class="text-3xl">&#8594;</span> <!-- Right arrow -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Product Details in Grid -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Box 1: Product Name and Weight -->
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 text-primary">MTR 3 Mins Breakfast Poha</h2>
+                    <p><strong>Weight:</strong> 60 grams</p>
+                </div>
+
+                <!-- Box 2: Manufacturing Details -->
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 text-primary">Manufacturing Details</h2>
+                    <p><strong>Manufacture Date:</strong> August 2024</p>
+                    <p><strong>Expiry Date:</strong> August 2025</p>
+                    <p><strong>Place of Origin:</strong> Bangalore, Karnataka, India</p>
+                </div>
+
+                <!-- Box 3: Manufacturer Details -->
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 text-primary">Manufacturer Info</h2>
+                    <p><strong>Manufacturer:</strong> MTR Foods Pvt. Ltd.</p>
+                    <p><strong>Contact:</strong> info@mtrfoods.com</p>
+                </div>
+
+                <!-- Box 4: How to Use the Product -->
+                <div class="card p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 text-primary">How to Use</h2>
+                    <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Related Products Section -->
+        <div class="related-products mt-8 p-4">
+            <h2 class="text-2xl font-bold mb-4 text-primary">More Related Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="related-card">
+                    <img src="https://www.jiomart.com/images/product/original/490009044/mtr-ready-to-eat-dal-makhani-300-g-product-images-o490009044-p490009044-0-202402272331.jpg?im=Resize=(420,420)" alt="Product 1">
+                    <h3 class="text-xl font-bold mt-2">Product 1</h3>
+                    <a href="#" class="know-more-button">Click Here to Know More</a>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="related-card">
+                    <img src="https://www.jiomart.com/images/product/original/493660667/tata-sampann-yumside-delhi-style-dal-makhani-285-g-product-images-o493660667-p599532598-0-202303180538.jpg?im=Resize=(420,420)" alt="Product 2">
+                    <h3 class="text-xl font-bold mt-2">Product 2</h3>
+                    <a href="#" class="know-more-button">Click Here to Know More</a>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="related-card">
+                    <img src="https://www.jiomart.com/images/product/original/490290942/gits-ready-meals-pau-bhaji-300-g-product-images-o490290942-p490290942-0-202203150704.jpg?im=Resize=(1000,1000)" alt="Product 3">
+                    <h3 class="text-xl font-bold mt-2">Product 3</h3>
+                    <a href="#" class="know-more-button">Click Here to Know More</a>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="related-card">
+                    <img src="https://www.jiomart.com/images/product/original/490921888/knorr-tomato-chatpata-instant-cup-a-soup-13-5-g-product-images-o490921888-p490921888-0-202405291635.jpg?im=Resize=(1000,1000)" alt="Product 4">
+                    <h3 class="text-xl font-bold mt-2">Product 4</h3>
+                    <a href="#" class="know-more-button">Click Here to Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-4 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Food360. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-green-500">Privacy Policy</a>
+                <a href="#" class="hover:text-green-500">Terms of Service</a>
+                <a href="#" class="hover:text-green-500">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        const images = [
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-product-images-o491179467-p491179467-0-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-product-images-o491179467-p491179467-1-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-product-images-o491179467-p491179467-1-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-product-images-o491179467-p491179467-2-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-legal-images-o491179467-p491179467-3-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-legal-images-o491179467-p491179467-4-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-legal-images-o491179467-p491179467-5-202404231713.jpg?im=Resize=(420,420)',
+            'https://www.jiomart.com/images/product/original/491179467/mtr-3-minute-breakfast-poha-mix-60-g-legal-images-o491179467-p491179467-6-202404231713.jpg?im=Resize=(420,420)',
+        ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const productImage = document.getElementById('productImage');
+            productImage.src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to start
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to end
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>

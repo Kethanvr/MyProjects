@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../checkoutpage.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="indie-flower-regular ">Petty</h1>
+        </div>
+        <div class="search-bar">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+            <input type="text" placeholder="&#xF002 Search high quality foods for your lovely pets" style="font-family:Arial, FontAwesome" />
+           
+        </div>
+        <nav>
+            <ul>  
+                <li><a href="/index.html">Home</a></li>         
+                <li><a href="/index.html">About us</a></li>
+                <li><a href="/index.html">Contact us</a></li>
+                <li><a href="/index.html">Work with us</a></li>
+                <li><a href="../construction.html">Back to page</a></li>
+
+            </ul>            
+        </nav>
+        <div class="profile">
+            <span class="profile-icon">signup/login</span>
+        </div>
+    </header>
+     <!-- Dont change the code tilll here 👆👆👆👆👆👆-->
+
+
+     <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <!-- change the  links of img  below here 👇👇👇👇-->
+        <div class="container">
+           <!-- Product Images -->
+<div class="product-images">
+    <img src="https://m.media-amazon.com/images/I/7195NwxeIOL._SX522_.jpg" alt="Product Thumbnail 1" onclick="changeMainImage(this.src)">
+    <img src="https://m.media-amazon.com/images/I/71Tt0KIwSvL._SX522_.jpg" alt="Product Thumbnail 2" onclick="changeMainImage(this.src)">
+    <img src="https://m.media-amazon.com/images/I/71Xi3d3MzxL._SX522_.jpg" alt="Product Thumbnail 3" onclick="changeMainImage(this.src)">
+    <img src="https://m.media-amazon.com/images/I/71IAbi4lLcL._SX522_.jpg" alt="Product Thumbnail 4" onclick="changeMainImage(this.src)">
+    <img src="https://m.media-amazon.com/images/I/81pikc8fwlL._SX522_.jpg" alt="Product Thumbnail 5" onclick="changeMainImage(this.src)">
+    <img src="https://m.media-amazon.com/images/I/81x0PhJGuDL._SX522_.jpg" alt="Product Thumbnail 6" onclick="changeMainImage(this.src)">
+</div>
+
+<!-- Main Image --> 
+<div class="main-image">
+    <img id="mainImage" src="https://m.media-amazon.com/images/I/7195NwxeIOL._SX522_.jpg" alt="Main Product Image">
+</div>
+
+<!-- Product Information -->
+<div class="product-info">
+    <h1>Sera Discus Granules 1.1 lb 1000 ml Pet Food, One Size</h1>
+    <div class="rating">★★★★☆ 4.7/5</div>
+
+    <div class="price">
+        <span>₹1200</span>
+        <span class="original-price">₹1350</span>
+        <span class="discount">-11%</span>
+    </div>
+
+    <p>Sera Discus Granules are specifically crafted for discus fish, providing a balanced diet with optimal protein levels to support vibrant colors and healthy growth. Ideal for daily feeding, these granules are easily digestible and promote strong immune function.</p>
+
+
+                <div class="age-options">
+                    <button class="age-category" onclick="selectAge('Puppy')">Puppy</button>
+                    <button class="age-category" onclick="selectAge('Adult')">Adult</button>
+                    <button class="age-category" onclick="selectAge('Senior')">Senior</button>
+                </div>
+                
+                
+    
+                <div class="quantity-options">
+                    <input type="radio" id="qty250g" name="quantity" value="250g" onclick="updateQuantity('250g')">
+                    <label for="qty250g">250g</label>
+                    <input type="radio" id="qty500g" name="quantity" value="500g" onclick="updateQuantity('500g')">
+                    <label for="qty500g">500g</label>
+                    <input type="radio" id="qty750g" name="quantity" value="750g" onclick="updateQuantity('750g')">
+                    <label for="qty750g">750g</label>
+                    <input type="radio" id="qty1kg" name="quantity" value="1kg" onclick="updateQuantity('1kg')">
+                    <label for="qty1kg">1kg</label>
+                </div>
+    
+                <div class="quantity">
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+                
+               
+                <div class="button-group">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart.png" alt="Cart" class="cart-icon" />
+                    <span id="cart-count">0</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="buy-now" onclick="buyNow()">Buy Now</button>
+
+                </div>
+            </div>
+        </div>
+    
+        <!-- Suggested Products -->
+        <div class="suggested-products">
+            <h2>You Might Also Like</h2>
+            <div class="grid">
+                <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                    <img src="https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995" alt="Polo with Contrast Trims">
+                    <h3>PEDIGREE® Dry Dog Food</h3>
+                    <div class="price">
+                        <span>$212</span>
+                        <span class="original-price">$242</span>
+                        <span class="discount">-20%</span>
+                    </div>
+
+
+                    <!-- Pop-up div -->
+                    <div class="popup-info">This is a high-quality dog food made with real chicken!</div>
+                </div>
+                <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                    <img src="https://www.petsy.online/cdn/shop/products/7_7a3eda57-823d-4637-8701-2aea66c9dfc2.jpg?v=1676621537" alt="Gradient Graphic T-shirt">
+                    <h3>PEDIGREE® Wet Dog Food</h3>
+                    <div class="price">$145</div>
+                    <div class="popup-info">Wet food packed with nutrients for your dog!</div>
+                </div>
+                <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrTN50PGyBoDXP3W0qh71LzXi1Li2wId-qOA&s" alt="Polo with Tipping Details">
+                    <h3>PEDIGREE® Dog Treats</h3>
+                    <div class="price">$180</div>
+                    <div class="popup-info">Delicious dog treats for training and rewards!</div>
+                </div>
+                <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCnR-xgTM42Du77zOgbuClO_aanhte9Fx0nA&s" alt="Black Striped T-shirt">
+                    <h3>PEDIGREE® Pro Dog Food</h3>
+                    <div class="price">
+                        <span>$120</span>
+                        <span class="original-price">$150</span>
+                        <span class="discount">-30%</span>
+                    </div>
+                    <div class="popup-info">Professional dog food for active and working dogs!</div>
+                </div>
+            </div>
+        </div>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <!--Dont change the below code 👇👇👇-->
+<footer>
+        <div class="footer-links">
+            <a class="bottom-link" href="../construction.html">Help</a>
+            <a class="bottom-link"href="../construction.html">Contact us</a>
+            <a class="bottom-link"href="../construction.html">About us</a>
+            <a class="bottom-link"href="../construction.html">Work with us</a>
+        </div>
+        <div class="footer-logo">
+            <p>©Petty 2024</p>
+        </div>
+    </footer>
+    <script>
+  
+    </script>
+    <script src="../checkoutpage.js"></script>
+</body>
+</html>
