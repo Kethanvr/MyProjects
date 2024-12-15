@@ -1,0 +1,97 @@
+/* src/styles/welcomepage.css */
+h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .logo h2 {
+    color: #FF4081;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  .btn-dark {
+    background-color: #FF4081;
+    border: none;
+    color: white;
+  }
+  
+  .btn-outline-dark {
+    border: 1px solid #FF4081;
+    color: #FF4081;
+  }
+  
+  footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .img-fluid {
+      width: 100%;
+      max-width: 200px;
+      margin-top: 20px;
+    }
+  
+    .row {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo h2 {
+      font-size: 28px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    .btn-dark {
+      padding: 12px;
+    }
+  
+    .btn-outline-dark {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .img-fluid {
+      width: 80%;
+      max-width: 180px;
+    }
+  
+    footer {
+      padding: 5px 0;
+    }
+  }
+  
